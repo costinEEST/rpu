@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter one: the reactive way</title>
+  </head>
+  <body>
+    <details>
+      <summary>Observable from a DOM event</summary>
+      <pre>
+        const mouseCoordinates = Observable.fromEvent(document, "mousemove");
+        mouseCoordinates.subscribe(e => console.log('X: ', e.clientX, 'Y: ', e.clientY));
+      </pre>
+    </details>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.8.0/rxjs.umd.min.js"></script>
+    <script>
+      const { from } = rxjs;
+
+      from(["Maria", "Joseph", "Nick"]).subscribe(
+        (x) => console.log(`Next: ${x}`),
+        (err) => console.log("Error:", err),
+        () => console.log("Completed")
+      );
+    </script>
+  </body>
+</html>

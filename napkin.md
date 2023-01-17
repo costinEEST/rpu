@@ -1,6 +1,6 @@
 ##### Book
 
-- https://pragprog.com/titles/smreactjs5/reactive-programming-with-rxjs-5
+- [Reactive Programming with RxJS 5 | Sergi Mansilla](./uajc)
 - https://pragprog.com/titles/rkrxjs/build-reactive-websites-with-rxjs
 - https://softchris.github.io/books/rxjs/hot-n-cold-observables
 
@@ -12,6 +12,7 @@
 
 - [Reactive Programming using Observables](https://github.com/lund0n/observables-utahjs)
 - [Your bouse is a database | Erik Meijer](https://twitter.com/headinthebox/status/1600255588528574464)
+- https://glebbahmutov.com/blog/journey-from-procedural-to-reactive-javascript-with-stops
 - https://www.youtube.com/playlist?list=PLa_W0QyB2915CaMl3sDUPPHCs0WwfJHGJ
 - https://www.youtube.com/playlist?list=PLWIcRrPLCdUdwhnxS2A7yZtxfHwB1MNVQ
 
@@ -22,6 +23,10 @@
 ##### Debugging
 
 - https://github.com/Coly010/rxjs-debug-operator
+
+### Historic
+
+- http://www.hanselman.com/blog/reactive-extensions-rx-is-now-open-source
 
 ##### Work with the DOM API
 
@@ -37,6 +42,7 @@
 
 - [RxFiddle is a debugger for Reactive Extensions](https://github.com/hermanbanken/RxFiddle)
 - [Interactive diagrams of Rx Observables](https://github.com/staltz/rxmarbles)
+- [Animated playground for Rx Observables](https://github.com/moroshko/rxviz)
 
 https://softchris.github.io/books/rxjs
 
