@@ -1,14 +1,13 @@
-import { Observable, interval, from, mergeMap, distinct, retry } from "rxjs";
+import { Observable, from, interval, mergeMap, retry, distinct } from "rxjs";
 import L from "leaflet";
 
-const QUAKE_URL = `https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojsonp`;
+const QUAKE_URL = `http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojsonp`;
 
 const mapContainer = document.createElement("div");
 mapContainer.id = "map";
 document.body.appendChild(mapContainer);
 
 const map = L.map("map").setView([33.858631, -118.279602], 7);
-
 L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png").addTo(map);
 
 function loadJSONP(settings) {
@@ -23,22 +22,22 @@ function loadJSONP(settings) {
     window[callbackName].data = data;
   };
 
-  return new Observable((observer) => {
+  return new Observable((subscriber) => {
     const handler = (e) => {
       const status = e.type === "error" ? 400 : 200;
       const response = window[callbackName].data;
 
       if (status === 200) {
-        observer.next({
+        subscriber.next({
           status,
           responseType: "jsonp",
           response,
           originalEvent: e,
         });
 
-        observer.complete();
+        subscriber.complete();
       } else {
-        observer.error({
+        subscriber.error({
           type: "error",
           status,
           originalEvent: e,
