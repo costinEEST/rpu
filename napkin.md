@@ -6,7 +6,11 @@
 
 ##### Cheat sheet
 
-- RxJS operator by [type](https://www.learnrxjs.io/learn-rxjs/operators) or in [alphabetical](https://www.learnrxjs.io/learn-rxjs/operators/complete) order
+- https://github.com/ReactiveX/rxjs/blob/master/docs_app/content/guide/operators.md
+- https://github.com/ReactiveX/rxjs/blob/master/src/operators/index.ts
+- https://github.com/ReactiveX/rxjs/blob/master/docs_app/content/6-to-7-change-summary.md
+- What is the difference between `of` and `from` operator?
+- What is the difference between `concatMap` and `mergeMap` operator?
 
 ##### Cinema
 
@@ -15,22 +19,47 @@
 - https://glebbahmutov.com/blog/journey-from-procedural-to-reactive-javascript-with-stops
 - https://www.youtube.com/playlist?list=PLa_W0QyB2915CaMl3sDUPPHCs0WwfJHGJ
 - https://www.youtube.com/playlist?list=PLWIcRrPLCdUdwhnxS2A7yZtxfHwB1MNVQ
+- Build the operators of RxJS from scratch: [article](https://blog.strongbrew.io/build-the-operators-from-rxjs-from-scratch), [playlist](https://www.youtube.com/playlist?list=PL7Z4uBV2KGdv5nTpKGlScdMbeVzM02b7L), [repo](<[repo](https://github.com/KwintenP/rxjs-operators-from-scratch)>)
 
 ##### Community
 
+- https://www.reddit.com/r/angular/comments/109y41z/comment/j4145te
+- http://www.hanselman.com/blog/reactive-extensions-rx-is-now-open-source
+- https://github.com/jhusain/observable-spec
 - https://reactivex.io/tutorials.html#rxjs
+- https://github.com/nartc/rxjs-react-custom-command
+- https://github.com/this-is-learning/rxjs-fundamentals-course
+- [An Implementation of Observables for Javascript](https://github.com/zenparsing/zen-observable)
+- [Generators are the new observables](https://github.com/zenparsing/geneviv)
+- [Observable Push Streams](https://github.com/zenparsing/zen-push)
 
 ##### Debugging
 
 - https://github.com/Coly010/rxjs-debug-operator
+- [A debugging library for RxJS](https://github.com/cartant/rxjs-spy)
+- [RxFiddle is a debugger for Reactive Extensions](https://github.com/hermanbanken/RxFiddle)
 
-### Historic
+##### RxJS operators
 
-- http://www.hanselman.com/blog/reactive-extensions-rx-is-now-open-source
+As of the latest version of RxJS, the following operators have been deprecated and are scheduled for removal in a future release:
+
+- `let` replaced by `pipe` operator
+- `do` replaced by `tap` operator
+- `catch` replaced by `catchError` operator
+- `finally` replaced by `finalize` operator
+- `switch` replaced by `switchAll` operator
+- `switchMapTo` replaced by `switchMap` operator
+- `takeUntil` replaced by `takeWhile` operator
+- `last` replaced by `lastValueFrom` operator
+- `startWith` replaced by `startWithMany` operator
+- `single` replaced by `singleValue` operator
+- [`create`](https://egghead.io/lessons/rxjs-using-observable-create-for-fine-grained-control) can be replaced by [`of`](https://stackoverflow.com/questions/55539103/angular-create-is-deprecated-use-new-observable-instead#comment97781613_55539146) operator
+- [`flatMap`](https://rxjs.dev/api/operators/flatMap) replaced by [`mergeMap`](https://www.learnrxjs.io/learn-rxjs/operators/transformation/mergemap)
 
 ##### Work with the DOM API
 
 - https://github.com/surma/observables-with-streams
+- https://dev.to/rxjs/fetching-data-in-react-with-rxjs-and-lt-gt-fragment-54h7
 
 ##### Work with the server
 
@@ -40,9 +69,15 @@
 
 ##### Tool
 
-- [RxFiddle is a debugger for Reactive Extensions](https://github.com/hermanbanken/RxFiddle)
-- [Interactive diagrams of Rx Observables](https://github.com/staltz/rxmarbles)
+- https://playcode.io/rxjs
 - [Animated playground for Rx Observables](https://github.com/moroshko/rxviz)
+- [Know your Observables before deploying to production](https://github.com/observable-playground/observable-playground)
+- [Interactive diagrams of Rx Observables](https://github.com/staltz/rxmarbles)
+- [RxJS cheat sheet inside VS Code](https://github.com/dzhavat/rxjs-cheatsheet)
+- [A game for learning RxJS](https://github.com/GregorBiswanger/rxjs-fruits)
+- [Chrome extension that can be used to visualize RxJS streams in realtime](https://github.com/KwintenP/rx-devtools)
+- https://github.com/rxjs-playground/rxjs-playground.github.io
+- [RxJS Insights is a browser extension that helps you debug and visualize the observables in your app](https://github.com/ksz-ksz/rxjs-insights)
 
 https://softchris.github.io/books/rxjs
 
